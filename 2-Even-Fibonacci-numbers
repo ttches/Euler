@@ -1,0 +1,18 @@
+function evenFib(n) {
+    var fib1 = 1;
+    var fib2 = 0;
+    var newFib = 0;
+    ans = 0;
+    while (newFib + fib2 < n) {
+        newFib = fib1+fib2;
+        if (newFib % 2 === 0) {
+            ans += newFib;
+            console.log(newFib);
+        }
+        fib2 = fib1;
+        fib1 = newFib;
+    }
+    return ans;
+}
+
+evenFib(4000000);
