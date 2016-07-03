@@ -1,0 +1,21 @@
+function lpf(n) {
+    var largest = 0;
+    for (var i = 10000; i > 1; i--) {
+        if (n % i === 0 && i != n) {
+            var prime = true;
+            for (var j = i - 1; j > 1; j--) {
+                if (i % j === 0) {
+                    prime = false;
+                }
+            }
+            if (prime) {
+                if (i > largest) {
+                    largest = i;
+                }
+            }
+        }
+    }
+    return largest;
+}
+
+lpf(600851475143);
