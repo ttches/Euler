@@ -1,0 +1,15 @@
+function mul35(n) {
+    ans = 0;
+    for (var i = 1; i < n; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            ans+=i;
+        }
+    }
+    if (ans > 0) {
+        return ans;
+    }else{
+        console.log("None");
+        return;
+    }
+}
+mul35(1000);
