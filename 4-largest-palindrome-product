@@ -1,0 +1,26 @@
+function lpp() {
+    list = [];
+    for (i = 999; i> 99; i--) {
+        for (j = i; j > 99; j--) {
+            if (palindrome(j*i)) {
+                list.push(j*i);
+            }
+        }
+    }
+    console.log(list);
+}
+function palindrome(n) {
+    n = n.toString();
+    last = n.length -1;
+    if (n.length <= 1) {
+        return true;
+    }
+    if (n[0] === n[last]) {
+        if(n.length ===2) {
+            return true;
+        }
+        return palindrome(n.slice(1, last));
+    }else{
+        return false;
+    }
+}
