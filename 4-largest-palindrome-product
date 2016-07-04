@@ -7,7 +7,7 @@ function lpp() {
             }
         }
     }
-    console.log(list);
+    return Math.max.apply(Math, list);
 }
 function palindrome(n) {
     n = n.toString();
