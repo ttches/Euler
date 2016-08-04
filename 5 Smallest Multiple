@@ -1,0 +1,13 @@
+
+function smallestMultiple(n) {
+    number = 2520;
+    for (var i = 1; i <= n; i++) {
+        if (number % i !== 0) {
+            number += 2520;
+            i=1
+            
+        }
+    }
+    console.log(number);
+};
+smallestMultiple(20);
